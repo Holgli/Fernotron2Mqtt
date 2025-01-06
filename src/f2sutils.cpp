@@ -67,7 +67,7 @@ unsigned int previousIndex(unsigned int index)
 
 /**********************************************************************************
  *
- * Signals are send from low to high bit, we need the oposite
+ * Signals are sent from low to high bit, we need the opposite
  *
  **********************************************************************************/
 

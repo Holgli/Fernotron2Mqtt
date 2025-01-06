@@ -19,7 +19,7 @@
  * Timing constants
  *
  **********************************************************************************/
-const unsigned int glitch = 50;               // ignor to short signals
+const unsigned int glitch = 50;               // ignore to short signals
 const unsigned int symbol_length = 400;       // fernotron symbol length 400us
 const unsigned int tolerance = 200;           // tolerance range 200us
 const unsigned int block_min_duration = 2750; // sync block min duration in us

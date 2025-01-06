@@ -60,7 +60,7 @@ ib_deps =
 	knolleary/PubSubClient@^2.8
 </pre> 
 
-The C1101 library is only necessary if you use a C1101 transceiver module. The libary is used to initialize the module and to set some basic parameters. If you use a MX-05V type receiver module the library can be omitted and you can comment out the C1101 code in main.cpp. 
+The C1101 library is only necessary if you use a C1101 transceiver module. The library is used to initialize the module and to set some basic parameters. If you use a MX-05V type receiver module the library can be omitted and you can comment out the C1101 code in main.cpp. 
 
 The ESP Async WebServer library is used to make some gateway informations acessable to your browser. 
 
@@ -87,25 +87,25 @@ In case of a central unit there are additional topics for group and member id.
 Example: Fernotron2MQTT/CentralUnit/ID_8020df/Group_1/Member_1/down
 </pre> 
 
-Additionally the gateway sends a JSON paylod with each message which contains all informations the Fernotron sender transmitts.
+Additionally the gateway sends a JSON paylod with each message which contains all informations the Fernotron sender transmits.
 
 <pre> 
 Example: {"Id":"8020df","Group":"1","Member":"1","Action":"5","Counter":"9"}
 </pre> 
 
-You can find the id of your sender in the serial montor, in the commad history or by a MQTT explorer software. Then you can subscribe to the topics to create automations for opening / stopping / closing shutters for example.
+You can find the id of your sender in the serial monitor, in the commad history or by a MQTT explorer software. Then you can subscribe to the topics to create automations for opening / stopping / closing shutters for example.
 
 
 
 ### 5 Debugging
 
-If not connected to the serieal monitor the gateway gives you some feedback by a led and a web page. 
+If not connected to the serial monitor the gateway gives you some feedback by a led and a web page. 
 A ESP32 D1 Mini e.g. has an internal led connected to GPIO 02. If there is a SPI connection error (C1101 module) this led will blink 5 times after a reset. If a Fernotron command is recognized this led will flash shortly. So it will make sense to use an external led if your board is missing an internal one.
 The gateway uses a web server to make some further informations available. Point your browser to the ip address of your Fernotron 2 MQTT Gateway (you find the ip in the log after start or reset) or check it out in your router. The gateway responses with a page giving you the list of the last 100 commands. The page will also show the rssi values of the wifi and C1101 connection. 
 
 
 ## Some final words
-+ The software currently ignors almost all error detection mechanisms of the protocol (parity bits, control words, retransmissions). Here is room for improvements. 
++ The software currently ignores almost all error detection mechanisms of the protocol (parity bits, control words, retransmissions). Here is room for improvements. 
 + It is necessary to compile the software with your wifi and MQTT credentials.
 + The sun sensors do only have a distance range of 10m. 
 + Tested with AZ-Delivery D1 Mini ESP32, Rademacher 2411 central unit,  2440 sun sensor and 2430 sender
