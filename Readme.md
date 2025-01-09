@@ -62,7 +62,7 @@ ib_deps =
 
 The C1101 library is only necessary if you use a C1101 transceiver module. The library is used to initialize the module and to set some basic parameters. If you use a MX-05V type receiver module the library can be omitted and you can comment out the C1101 code in main.cpp. 
 
-The ESP Async WebServer library is used to make some gateway informations acessable to your browser. 
+The ESP Async WebServer library is used to make some gateway informations accessable to your browser. 
 
 ### 3 Compile the software 
 
